@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -41,6 +42,12 @@ Route::get('/', function () {
 
     return view('pages.homepage', compact('brands', 'description'));
 })->name('home');
+
+Route::get('/contact', function () {
+    return view('pages.contact');
+});
+
+Route::post('/contact', [ContactController::class, 'store']);
 
 Route::get('/manual/{language}/{brand_slug}/', [RedirectController::class, 'brand']);
 Route::get('/manual/{language}/{brand_slug}/brand.html', [RedirectController::class, 'brand']);
