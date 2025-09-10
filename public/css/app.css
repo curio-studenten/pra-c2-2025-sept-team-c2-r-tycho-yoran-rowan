@@ -6562,6 +6562,29 @@ button.bg-dark:focus {
     border: 0;
 }
 
+.manualButten a {
+    display: inline-block;     
+    padding: 10px 20px;         
+    color: #3490dc;    
+    background-color: #e9ecef ;    
+    border-radius: 2px;                 
+    border: none;              
+    font-size: 16px;            
+    font-weight: 600;            
+    margin: 0px 0px 10px 0px;
+}
+
+.manualButten a:hover {
+    transform: translateY(-2px);  
+}
+
+.manualButten a:active {
+    transform: translateY(0);     
+}
+.clear{
+    margin: 0px 0px 25px 0px;
+}
+
 .embed-responsive-21by9::before {
     padding-top: 42.8571428571%;
 }
