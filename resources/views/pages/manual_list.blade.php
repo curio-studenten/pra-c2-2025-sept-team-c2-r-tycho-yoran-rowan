@@ -18,14 +18,14 @@
 
     @foreach ($manuals as $manual)
         <div class="manualButten">
-            @if ($manual->locally_available)
-                <a href="/{{ $brand->id }}/{{ $brand->getNameUrlEncodedAttribute() }}/{{ $manual->id }}/"
-                    alt="{{ $manual->name }}" title="{{ $manual->name }}">{{ $manual->name }}</a>
-                ({{$manual->filesize_human_readable}})
-            @else
-                <a href="{{ $manual->url }}" target="new" alt="{{ $manual->name }}"
+{{--            @if ($manual->locally_available)--}}
+{{--                <a href="/{{ $brand->id }}/{{ $brand->getNameUrlEncodedAttribute() }}/{{ $manual->id }}/"--}}
+{{--                    alt="{{ $manual->name }}" title="{{ $manual->name }}">{{ $manual->name }}</a>--}}
+{{--                ({{$manual->filesize_human_readable}})--}}
+{{--            @else--}}
+                <a href="{{ route('manualRedirect', $manual->id) }}" target="new" alt="{{ $manual->name }}"
                     title="{{ $manual->name }}">{{ $manual->name }}</a>
-            @endif
+{{--            @endif--}}
 
             <br />
         </div>

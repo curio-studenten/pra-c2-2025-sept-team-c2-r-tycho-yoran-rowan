@@ -18,4 +18,12 @@ class ManualController extends Controller
             "brand" => $brand,
         ]);
     }
+
+    public function redirect($manual_id)
+    {
+        $manual = Manual::findOrFail($manual_id);
+        $manual->increment('visits');
+
+        return redirect()->to($manual->url);
+    }
 }
