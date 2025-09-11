@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\ContactController;
+use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,6 +29,7 @@ Productcat:		/category/12/Computers/
 */
 
 use App\Models\Brand;
+use App\Models\Manual;
 use App\Http\Controllers\RedirectController;
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\TypeController;
@@ -39,8 +42,8 @@ use App\Http\Controllers\LocaleController;
 Route::get('/', function () {
     $brands = Brand::all()->sortBy('name');
     $description = 'Hoi dit is een pagina waar je handleiding kunt downloaden';
-
-    return view('pages.homepage', compact('brands', 'description'));
+    $top10 = Manual::all()->sortByDesc('visits')->take(10)->split(2);
+    return view('pages.homepage', compact('brands', 'description', 'top10'));
 })->name('home');
 
 Route::get('/contact', function () {

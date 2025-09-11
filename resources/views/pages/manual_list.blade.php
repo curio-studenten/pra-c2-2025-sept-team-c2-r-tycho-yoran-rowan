@@ -15,6 +15,21 @@
     <p>{{ __('introduction_texts.type_list', ['brand' => $brand->name]) }}</p>
 
 
+    <div class="jumbotron">
+
+        <h2 class="jumbotron-center">Top 5 Manuals</h2>
+
+        <div class="top-manuals">
+            <ol>
+                @foreach($top5 as $manual)
+                    <li><a href="/{{$manual->id}}">{{$manual->name}}</a> | Visits: {{$manual->visits}}</li>
+                @endforeach
+            </ol>
+        </div>
+
+
+
+    </div>
 
     @foreach ($manuals as $manual)
         <div class="manualButten">

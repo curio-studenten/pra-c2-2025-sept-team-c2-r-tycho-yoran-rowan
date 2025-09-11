@@ -18,7 +18,32 @@
 $size = count($brands);
 $columns = 3;
 $chunk_size = ceil($size / $columns);
+
+$topSplit = 1;
     ?>
+
+        <div class="jumbotron">
+
+            <h2 class="jumbotron-center">Top 10 Manuals</h2>
+
+            <div class="top-manuals">
+                @foreach($top10 as $parts)
+                    <ol start="{{$topSplit}}">
+                        @foreach($parts as $manual)
+                            <li><a href="/{{$manual->id}}">{{$manual->name}}</a> | Visits: {{$manual->visits}}</li>
+                        @endforeach
+                    </ol>
+                        <?php $topSplit +=5 ?>
+                @endforeach
+            </div>
+
+
+
+        </div>
+
+
+
+
 
     <div class="container">
         <!-- Example row of columns -->
@@ -28,7 +53,7 @@ $chunk_size = ceil($size / $columns);
 
             @foreach($brands->chunk($chunk_size) as $chunk)
                         <div class="col-md-4">
-                            
+
                             <ul>
                                 @foreach($chunk as $brand)
 
@@ -57,6 +82,7 @@ $chunk_size = ceil($size / $columns);
             @endforeach
 
         </div>
+
 
     </div>
 </x-layouts.app>
