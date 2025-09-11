@@ -178,6 +178,25 @@ a:not([href]):not([class]):hover {
     color: inherit;
     text-decoration: none;
 }
+a[href] {
+  color: black;
+  text-decoration: none;
+}
+
+a[href]:hover {
+    color: black;
+  text-decoration: none;
+}
+footer a[href] {
+  color: #fff;
+  
+}
+footer a[href]:hover {
+    color: white;
+  
+}
+
+
 
 pre,
 code,
@@ -367,7 +386,8 @@ h1, h2, h3, h4, h5, h6,
 }
 
 h1, .h1 {
-    font-size: 2.25rem;
+    font-size: 2.5rem;
+    font-weight: bold;
 }
 
 h2, .h2 {
@@ -550,6 +570,7 @@ pre code {
     padding-right: 15px;
     padding-left: 15px;
     margin: 0 auto;
+    
 }
 
 
@@ -580,6 +601,7 @@ pre code {
     margin-right: -15px;
     margin-left: -15px;
     justify-content: center;
+    
 }
 
 .no-gutters {
@@ -1082,6 +1104,8 @@ pre code {
     .col-md-4 {
         flex: 0 0 33.3333333333%;
         max-width: 33.3333333333%;
+        background-color: #e9ecef;
+        color: black;
     }
 
     .col-md-5 {
@@ -4820,6 +4844,9 @@ a.badge-dark:focus, a.badge-dark.focus {
     margin-bottom: 2rem;
     background-color: #e9ecef;
     border-radius: 0.3rem;
+    font-weight: bold;
+    
+
 }
 @media (min-width: 576px) {
     .jumbotron {
