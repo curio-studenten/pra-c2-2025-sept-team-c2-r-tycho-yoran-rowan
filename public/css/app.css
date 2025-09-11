@@ -10152,3 +10152,8 @@ a.text-dark:hover, a.text-dark:focus {
     justify-content: center;
     margin-bottom: 40px;
 }
+
+.brand-grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
