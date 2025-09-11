@@ -54,7 +54,8 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
     display: block;
 }
 
-body {
+body { 
+    
     margin: 0;
     font-family: "Nunito", sans-serif;
     font-size: 0.9rem;
@@ -6597,10 +6598,10 @@ button.bg-dark:focus {
     border: 0;
 }
 
-.manualButten a {
+.manualButton a {
     display: inline-block;
     padding: 10px 20px;
-    color: #3490dc;
+    color: black;
     background-color: #e9ecef ;
     border-radius: 2px;
     border: none;
@@ -6609,11 +6610,11 @@ button.bg-dark:focus {
     margin: 0px 0px 10px 0px;
 }
 
-.manualButten a:hover {
+.manualButton a:hover {
     transform: translateY(-2px);
 }
 
-.manualButten a:active {
+.manualButton a:active {
     transform: translateY(0);
 }
 

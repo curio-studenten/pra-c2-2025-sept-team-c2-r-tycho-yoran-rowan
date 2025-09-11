@@ -32,7 +32,7 @@
     </div>
 
     @foreach ($manuals as $manual)
-        <div class="manualButten">
+        <div class="manualButton">
 {{--            @if ($manual->locally_available)--}}
 {{--                <a href="/{{ $brand->id }}/{{ $brand->getNameUrlEncodedAttribute() }}/{{ $manual->id }}/"--}}
 {{--                    alt="{{ $manual->name }}" title="{{ $manual->name }}">{{ $manual->name }}</a>--}}
