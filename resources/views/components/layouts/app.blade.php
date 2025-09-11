@@ -41,11 +41,12 @@
 
 
         </div>
-        <div class="row">
+        
+
+
+    </div>
+    <div class="row">
             <x-footer />
-        </div>
-
-
     </div>
 
     <!-- Bootstrap core JavaScript
