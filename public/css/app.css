@@ -6565,23 +6565,23 @@ button.bg-dark:focus {
 }
 
 .manualButten a {
-    display: inline-block;     
-    padding: 10px 20px;         
-    color: #3490dc;    
-    background-color: #e9ecef ;    
-    border-radius: 2px;                 
-    border: none;              
-    font-size: 16px;            
-    font-weight: 600;            
+    display: inline-block;
+    padding: 10px 20px;
+    color: #3490dc;
+    background-color: #e9ecef ;
+    border-radius: 2px;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
     margin: 0px 0px 10px 0px;
 }
 
 .manualButten a:hover {
-    transform: translateY(-2px);  
+    transform: translateY(-2px);
 }
 
 .manualButten a:active {
-    transform: translateY(0);     
+    transform: translateY(0);
 }
 
 /* --- */
@@ -6616,7 +6616,7 @@ textarea:focus {
 }
 
 button[type="submit"] {
-    background-color: #e9ecef ;    
+    background-color: #e9ecef ;
     color: #3490dc;
     border: none;
     padding: 12px 28px;
@@ -6629,11 +6629,11 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-        transform: translateY(-2px);  
+        transform: translateY(-2px);
 
 }
 button[type="submit"]:active {
-        transform: translateY(0px);  
+        transform: translateY(0px);
 
 }
 
@@ -10107,3 +10107,20 @@ a.text-dark:hover, a.text-dark:focus {
     color: #ccc;
     content: "/ ";
 }
+
+
+.top-manuals {
+    display: flex;
+    justify-content: space-around;
+}
+
+.jumbotron-center {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+/*.top10 > li {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*}*/
