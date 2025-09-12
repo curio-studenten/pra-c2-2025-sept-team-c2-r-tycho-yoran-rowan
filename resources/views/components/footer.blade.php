@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <footer>
   <div class="footer-info">
     <div class="foote-over">
@@ -17,9 +16,6 @@
       <p>https://www.twitter.com</p>
     </div>
   </div>
-=======
-<footer >
->>>>>>> dd541b249d0ae10a23cba45a203e515ff7a39469
   © {{ __('misc.copyright') }}
   <a class="navbar-brand" href="/contact" title="{{ __('misc.contact_alt') }}">{{ __('Contact') }}</a>
 </footer>
