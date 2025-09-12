@@ -1,7 +1,23 @@
 <footer>
+  <div class="footer-info">
+    <div class="foote-over">
+    <h4>Over ons</h4>
+      <p>Informatie over ons bedrijf.</p>
+    </div>
+    <div class="footer-contact">
+      <h4>Contact Gegevens</h4>
+      <p>31 06000000</p>
+      <p>Email: info@example.com</p>
+      </div>
+    <div class="footer-social">
+      <h4>Social Links</h4>
+      <p>https://www.instagram.com</p>
+      <p>https://www.facebook.com</p>
+      <p>https://www.twitter.com</p>
+    </div>
+  </div>
   © {{ __('misc.copyright') }}
-  <a class="navbar-brand" href="/contact" title="{{ __('misc.contact_alt') }}">{{ __('contact') }}</a>
-
+  <a class="navbar-brand" href="/contact" title="{{ __('misc.contact_alt') }}">{{ __('Contact') }}</a>
 </footer>
 
 

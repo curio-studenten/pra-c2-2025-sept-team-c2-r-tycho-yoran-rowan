@@ -50,6 +50,8 @@ Route::get('/contact', function () {
     return view('pages.contact');
 });
 
+
+
 Route::post('/contact', [ContactController::class, 'store']);
 
 Route::get('/manual/{language}/{brand_slug}/', [RedirectController::class, 'brand']);
