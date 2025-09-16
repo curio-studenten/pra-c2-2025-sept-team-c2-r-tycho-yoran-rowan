@@ -45,9 +45,7 @@
 
 
     </div>
-    <div class="row">
-            <x-footer />
-    </div>
+    <x-footer />
 
     <!-- Bootstrap core JavaScript
 ================================================== -->

@@ -22,67 +22,55 @@ $chunk_size = ceil($size / $columns);
 $topSplit = 1;
     ?>
 
-        <div class="jumbotron">
+    <div class="jumbotron">
 
-            <h2 class="jumbotron-center">Top 10 Manuals</h2>
+        <h2 class="jumbotron-center">Top 10 Manuals</h2>
 
-            <div class="top-manuals">
-                @foreach($top10 as $parts)
-                    <ol start="{{$topSplit}}">
-                        @foreach($parts as $manual)
-                            <li><a href="/{{$manual->id}}">{{$manual->name}}</a> | Visits: {{$manual->visits}}</li>
-                        @endforeach
-                    </ol>
-                        <?php $topSplit +=5 ?>
-                @endforeach
-            </div>
-
-
-
-        </div>
-
-
-
-
-
-    <div class="container">
-        <!-- Example row of columns -->
-        <p>{{ $description }}</p>
-        <div class="row">
-
-
-            @foreach($brands->chunk($chunk_size) as $chunk)
-                        <div class="col-md-4">
-
-                            <ul>
-                                @foreach($chunk as $brand)
-
-                                                <?php
-                                    $current_first_letter = strtoupper(substr($brand->name, 0, 1));
-
-                                    if (!isset($header_first_letter) || (isset($header_first_letter) && $current_first_letter != $header_first_letter)) {
-                                        echo '</ul>
-                                                                                                                                        <h2>' . $current_first_letter . '</h2>
-                                                                                                                                        <ul>';
-                                    }
-                                    $header_first_letter = $current_first_letter
-                                                                                                                                            ?>
-
-                                                <li>
-                                                    <a href="/{{ $brand->id }}/{{ $brand->getNameUrlEncodedAttribute() }}/">{{ $brand->name }}</a>
-                                                </li>
-
-                                @endforeach
-                            </ul>
-
-                        </div>
-                        <?php
-                unset($header_first_letter);
-                                                                ?>
+        <div class="top-manuals">
+            @foreach($top10 as $parts)
+                <ol start="{{$topSplit}}">
+                    @foreach($parts as $manual)
+                        <li><a href="/{{$manual->id}}">{{$manual->name}}</a> | Visits: {{$manual->visits}}</li>
+                    @endforeach
+                </ol>
+                <?php    $topSplit += 5 ?>
             @endforeach
-
         </div>
+
 
 
     </div>
+
+
+    <div class="breadcrumb">
+        <p>{{ $description }}</p>
+    </div>
+
+
+    <div class="jumbotron">
+        
+
+        @php
+            $groupedBrands = $brands->groupBy(function ($brand) {
+                return strtoupper(substr($brand->name, 0, 1));
+            });
+        @endphp
+
+        <div class="brands-grid">
+            @foreach($groupedBrands as $letter => $letterBrands)
+                <div class="brand-column">  
+                    <h2 class="brand-letter">{{ $letter }}</h2>
+                    @foreach($letterBrands as $brand)
+                        <div class="brand-item">
+                            <a href="/{{ $brand->id }}/{{ $brand->getNameUrlEncodedAttribute() }}/">
+                                {{ $brand->name }}
+                            </a>
+                        </div>
+                    @endforeach
+                </div>
+            @endforeach
+        </div>
+    </div>
+
+
 </x-layouts.app>
