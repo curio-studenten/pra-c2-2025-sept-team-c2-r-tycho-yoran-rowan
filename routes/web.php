@@ -47,7 +47,6 @@ Route::get('/', function () {
 })->name('home');
 
 Route::get("/manual/{manual_id}/", [ManualController::class, 'redirect'])->name('manualRedirect');
-Route::get('/{letter}/', [BrandController::class, 'getBrands']);
 
 
 Route::get('/contact', function () {
@@ -57,6 +56,9 @@ Route::get('/contact', function () {
 
 
 Route::post('/contact', [ContactController::class, 'store']);
+
+Route::get('/{letter}/', [BrandController::class, 'getBrands']);
+
 
 Route::get('/manual/{language}/{brand_slug}/', [RedirectController::class, 'brand']);
 Route::get('/manual/{language}/{brand_slug}/brand.html', [RedirectController::class, 'brand']);
