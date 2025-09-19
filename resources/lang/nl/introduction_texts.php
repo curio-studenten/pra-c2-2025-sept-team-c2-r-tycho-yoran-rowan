@@ -17,5 +17,5 @@ return [
 'homepage_line_2' => "Of u nu een handleiding of gids bent kwijtgeraakt van uw apparaat, of dat u een tweedehands apparaat heeft gekocht, op DownloadYourManual kunt u altijd de handleiding gratis downloaden. Misschien wilt u de handleiding voor later gebruik opslaan zodat u deze altijd terug kunt vinden, in dat geval download u de handleiding direct gratis op DownloadYourManual.com.",
 'homepage_line_3' => "Vind snel de handleiding door het juiste merk hieronder te selecteren.",
 'manual_list' => "Hier kunt u alle handleidingen en gebruikersgidsen voor de :brand :type vinden. Klik op de onderstaande links om de handleiding te bekijken of te downloaden.",
-
+'type_list' => "Hieronder staan alle verschillende types van :brand. Selecteer het apparaat van uw keuze om de handleiding of gebruikersgids te downloaden.",
 ];

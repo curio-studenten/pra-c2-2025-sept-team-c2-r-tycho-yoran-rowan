@@ -17,7 +17,7 @@
 
     <div class="jumbotron">
 
-        <h2 class="jumbotron-center">Top 5 Manuals</h2>
+        <h2 class="jumbotron-center">{{ __('misc.top_5_manuals') }}</h2>
 
         <div class="top-manuals">
             <ol>

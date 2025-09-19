@@ -5,6 +5,7 @@
             
             <a class="navbar-brand" href="/contact" title="{{ __('misc.contact_alt') }}">{{ __('contact') }}</a>
         </div>
+
         <div id="navbar" class="form-inline">
 
             <script>
@@ -19,8 +20,12 @@
                 })();
             </script>
             <gcse:searchbox-only></gcse:searchbox-only>
-
+                <div class="language-switcher">
+                    <a href="{{ route(name: 'lang.switch', parameters: 'en') }}">🇬🇧 English</a> 
+                    <a href="{{ route(name: 'lang.switch', parameters: 'nl') }}">🇳🇱 Nederlands</a>
+                </div>
 
         </div><!--/.navbar-collapse -->
+
     </div>
 </nav>

@@ -20,31 +20,31 @@
 
     <div class="container">
 
-        <p>Neem contact met ons op als u vragen heeft over onze handleidingen.</p>
+        {{ __('misc.contact_info') }}
 
         <form action="/contact" method="POST">
             @csrf
             <div>
-                <label for="name">Naam</label>
+                <label for="name">{{ __('misc.name') }}</label>
                 <input type="text" name="name" id="name" required>
             </div>
 
             <div>
-                <label for="email">E-mailadres</label>
+                <label for="email"></label>{{ __('misc.email') }}</label>
                 <input type="email" name="email" id="email" required>
             </div>
 
             <div>
-                <label for="subject">Onderwerp</label>
+                <label for="subject"></label>{{ __('misc.subject') }}</label>
                 <input type="text" name="subject" id="subject" required>
             </div>
 
             <div>
-                <label for="message">Bericht</label>
+                <label for="message"></label>{{ __('misc.message') }}</label>
                 <textarea name="message" id="message" rows="4" required></textarea>
             </div>
 
-            <button type="submit">Versturen</button>
+            <button type="submit">{{ __('misc.send') }}</button>
         </form>
 
     </div>

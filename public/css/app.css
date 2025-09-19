@@ -11148,7 +11148,10 @@ a.text-dark:focus {
     justify-content: center;
     margin-bottom: 40px;
 }
-
+.language-switcher a{
+    color: white;
+    margin-left: 20px;
+}
 /*.top10 > li {*/
 /*    display: flex;*/
 /*    flex-direction: column;*/

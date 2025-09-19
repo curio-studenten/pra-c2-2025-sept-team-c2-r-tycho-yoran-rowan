@@ -41,7 +41,7 @@ use App\Http\Controllers\LocaleController;
 // Homepage
 Route::get('/', function () {
     $brands = Brand::all()->sortBy('name');
-    $description = 'Hoi dit is een pagina waar je handleiding kunt downloaden';
+    $description = __(key: 'misc.homepage_description');
     $top10 = Manual::all()->sortByDesc('visits')->take(10)->split(2);
     return view('pages.homepage', compact('brands', 'description', 'top10'));
 })->name('home');
@@ -66,7 +66,8 @@ Route::get('/manual/{language}/{brand_slug}/brand.html', [RedirectController::cl
 Route::get('/datafeeds/{brand_slug}.xml', [RedirectController::class, 'datafeed']);
 
 // Locale routes
-Route::get('/language/{language_slug}/', [LocaleController::class, 'changeLocale']);
+Route::get('/language/{language_slug}/', [LocaleController::class, 'changeLocale'])
+    ->name('lang.switch');
 
 // List of manuals for a brand
 Route::get('/{brand_id}/{brand_slug}/', [BrandController::class, 'show']);
