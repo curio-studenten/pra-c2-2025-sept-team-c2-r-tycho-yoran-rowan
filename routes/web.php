@@ -46,6 +46,10 @@ Route::get('/', function () {
     return view('pages.homepage', compact('brands', 'description', 'top10'));
 })->name('home');
 
+Route::get("/manual/{manual_id}/", [ManualController::class, 'redirect'])->name('manualRedirect');
+Route::get('/{letter}/', [BrandController::class, 'getBrands']);
+
+
 Route::get('/contact', function () {
     return view('pages.contact');
 });
@@ -72,6 +76,5 @@ Route::get('/{brand_id}/{brand_slug}/{manual_id}/', [ManualController::class, 's
 // Generate sitemaps
 Route::get('/generateSitemap/', [SitemapController::class, 'generate']);
 
-Route::get("/{manual_id}/", [ManualController::class, 'redirect'])->name('manualRedirect');
 
 
