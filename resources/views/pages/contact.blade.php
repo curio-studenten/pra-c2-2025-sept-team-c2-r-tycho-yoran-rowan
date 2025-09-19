@@ -25,22 +25,22 @@
         <form action="/contact" method="POST">
             @csrf
             <div>
-                {{ __('misc.name') }}
+                <label for="name">{{ __('misc.name') }}</label>
                 <input type="text" name="name" id="name" required>
             </div>
 
             <div>
-                {{ __('misc.email') }}
+                <label for="email"></label>{{ __('misc.email') }}</label>
                 <input type="email" name="email" id="email" required>
             </div>
 
             <div>
-                {{ __('misc.subject') }}
+                <label for="subject"></label>{{ __('misc.subject') }}</label>
                 <input type="text" name="subject" id="subject" required>
             </div>
 
             <div>
-                {{ __('misc.message') }}
+                <label for="message"></label>{{ __('misc.message') }}</label>
                 <textarea name="message" id="message" rows="4" required></textarea>
             </div>
 
