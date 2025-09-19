@@ -23,4 +23,13 @@ class BrandController extends Controller
         ]);
 
     }
+
+    public function getBrands($letter) {
+        $brands = Brand::where('name', 'LIKE', $letter . "%")->orderBy('name', 'asc')->get();
+
+        return view('pages/brand_list', [
+            "brands" => $brands,
+            "letter" => $letter,
+        ]);
+    }
 }
