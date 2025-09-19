@@ -1,16 +1,16 @@
 <footer>
   <div class="footer-info">
     <div class="foote-over">
-    <h4>Over ons</h4>
+    <h4>{{ __('misc.about') }}</h4>
       <p>Informatie over ons bedrijf.</p>
     </div>
     <div class="footer-contact">
-      <h4>Contact Gegevens</h4>
+      <h4>{{ __('misc.contact') }}</h4>
       <p>31 06000000</p>
       <p>Email: info@example.com</p>
       </div>
     <div class="footer-social">
-      <h4>Social Links</h4>
+      <h4>{{ __('misc.social_links') }}</h4>
       <p>https://www.instagram.com</p>
       <p>https://www.facebook.com</p>
       <p>https://www.twitter.com</p>

@@ -22,5 +22,16 @@ return [
 'view_manual' => "Directly view your manual",
 'view_manual_alt' => "Directly view your manual",
 'all_brands' => "All brands",
-
+'homepage_description' => 'This is a page where you can download manuals',
+'about' => "About us",
+'contact' => "Contact details",
+'social_links' => "Social Links",
+'name' => "Name",
+'email' => "Email address",
+'subject' => "Subject",
+'message' => "Message",
+'contact_info' => "Contact us if you have any questions about our manuals.",
+'send' => "Send",
+'top_10_manuals' => "Top 10 Manuals",
+'top_5_manuals' => "Top 5 Manuals"
 ];
