@@ -30,7 +30,7 @@ $topSplit = 1;
             @foreach($top10 as $parts)
                 <ol start="{{$topSplit}}">
                     @foreach($parts as $manual)
-                        <li><a href="/{{$manual->id}}">{{$manual->name}}</a> | Visits: {{$manual->visits}}</li>
+                        <li><a href="/manual/{{$manual->id}}">{{$manual->name}}</a> | Visits: {{$manual->visits}}</li>
                     @endforeach
                 </ol>
                 <?php    $topSplit += 5 ?>

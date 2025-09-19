@@ -22,7 +22,7 @@
         <div class="top-manuals">
             <ol>
                 @foreach($top5 as $manual)
-                    <li><a href="/{{$manual->id}}">{{$manual->name}}</a> | Visits: {{$manual->visits}}</li>
+                    <li><a href="/manual/{{$manual->id}}">{{$manual->name}}</a> | Visits: {{$manual->visits}}</li>
                 @endforeach
             </ol>
         </div>
