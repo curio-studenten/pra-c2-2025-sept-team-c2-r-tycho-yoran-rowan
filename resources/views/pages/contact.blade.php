@@ -18,7 +18,7 @@
 
     ?>
 
-    <div class="container">
+    <div class="jumbotron">
 
         {{ __('misc.contact_info') }}
 

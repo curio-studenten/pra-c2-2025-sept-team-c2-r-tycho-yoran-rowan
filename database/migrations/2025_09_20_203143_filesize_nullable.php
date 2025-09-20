@@ -11,9 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->integer('age')->nullable();
-            //
+        Schema::table('manuals', function (Blueprint $table) {
+            $table->bigInteger('filesize')->nullable()->change();
+
         });
     }
 
@@ -22,8 +22,9 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('users', function (Blueprint $table) {
-             $table->dropColumn('age');
+        Schema::table('manuals', function (Blueprint $table) {
+            $table->bigInteger('filesize')->nullable(false)->change();
+
         });
     }
 };

@@ -25,6 +25,6 @@ class ContactController extends Controller
 
         file_put_contents(storage_path('app/contactform.txt'), $txt, FILE_APPEND);
 
-        return back();
+        return redirect('/');
     }
 }

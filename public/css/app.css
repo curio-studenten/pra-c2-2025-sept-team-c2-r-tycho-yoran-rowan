@@ -11152,6 +11152,47 @@ a.text-dark:focus {
     color: white;
     margin-left: 20px;
 }
+
+.jumbotron input,
+.jumbotron select,
+.jumbotron textarea {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 18px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.jumbotron input:focus,
+.jumbotron select:focus,
+.jumbotron textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.4);
+    outline: none;
+}
+
+.jumbotron button {
+    display: inline-block;
+    background: #007bff;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.1s ease;
+}
+
+/* Hover en klik effect */
+.jumbotron button:hover {
+    background: #0056b3;
+}
+
+.jumbotron button:active {
+    transform: scale(0.98);
+}
 /*.top10 > li {*/
 /*    display: flex;*/
 /*    flex-direction: column;*/

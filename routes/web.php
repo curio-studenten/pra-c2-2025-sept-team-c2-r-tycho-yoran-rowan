@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\FormController;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
@@ -53,9 +54,14 @@ Route::get('/contact', function () {
     return view('pages.contact');
 });
 
-
-
 Route::post('/contact', [ContactController::class, 'store']);
+
+
+Route::get('/form', [FormController::class, 'index']);
+Route::post('/form', [FormController::class, 'store']);
+
+
+
 
 Route::get('/{letter}/', [BrandController::class, 'getBrands']);
 
