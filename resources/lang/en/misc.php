@@ -33,5 +33,8 @@ return [
 'contact_info' => "Contact us if you have any questions about our manuals.",
 'send' => "Send",
 'top_10_manuals' => "Top 10 Manuals",
-'top_5_manuals' => "Top 5 Manuals"
+'top_5_manuals' => "Top 5 Manuals",
+'url' => "URL",
+'brand' => "Brand",
+'submit' => "Submit",
 ];

@@ -33,5 +33,10 @@ return [
 'contact_info' => "Neem contact met ons op als u vragen heeft over onze handleidingen.",
 'send' => "Versturen",
 'top_10_manuals' => "Top 10 Handleidingen",
-'top_5_manuals' => "Top 5 Handleidingen"
+'top_5_manuals' => "Top 5 Handleidingen",
+'url' => "URL",
+'submit' => "Versturen",
+'search' => "Zoeken...",
+'brand' => "Merk",
+
 ];

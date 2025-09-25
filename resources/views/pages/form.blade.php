@@ -9,13 +9,13 @@
         <form action="/form" method="POST">
             @csrf
             <div>
-                <label for="name">Naam</label>
+                <label for="name">{{ __('misc.name') }}</label>
                 <input type="text" name="name" id="name" required>
             </div>
 
 
             <div class="form-group">
-                <label for="brand">Merk</label>
+                <label for="brand">{{ __('misc.brand') }}</label>
                 <select name="brand" id="brand" required>
                     @foreach($brands as $brand)
                         <option value="{{ $brand->id }}">{{ $brand->name }}</option>
@@ -23,13 +23,13 @@
                 </select>
             </div>
             <div>
-                <label for="originUrl">URL</label>
+                <label for="originUrl">{{ __('misc.url') }}</label>
                 <input type="url" name="originUrl" id="originUrl" required>
             </div>
 
 
 
-            <button type="submit">Versturen</button>
+            <button type="submit">{{ __('misc.submit') }}</button>
         </form>
     </div>
 </x-layouts.app>
