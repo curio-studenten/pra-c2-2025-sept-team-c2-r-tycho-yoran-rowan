@@ -11193,6 +11193,22 @@ a.text-dark:focus {
 .jumbotron button:active {
     transform: scale(0.98);
 }
+.device-button {
+  display: inline-block;
+  background-color: #e9ecef; /* zelfde lichtgrijze achtergrond */
+  border: none;
+  padding: 10px 20px;
+  margin: 5px 0;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 4px; /* lichte afronding voor consistentie */
+}
+
+.device-button:hover {
+  background-color: #c8cbcf; /* hover effect */
+}
+
 /*.top10 > li {*/
 /*    display: flex;*/
 /*    flex-direction: column;*/

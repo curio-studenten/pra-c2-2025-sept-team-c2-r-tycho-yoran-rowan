@@ -60,6 +60,10 @@ Route::post('/contact', [ContactController::class, 'store']);
 Route::get('/form', [FormController::class, 'index']);
 Route::post('/form', [FormController::class, 'store']);
 
+use App\Http\Controllers\ShortLinkController;
+
+Route::get('/shorten', [ShortLinkController::class, 'shorten']); 
+Route::get('/link/{code}', [ShortLinkController::class, 'redirect']); 
 
 
 

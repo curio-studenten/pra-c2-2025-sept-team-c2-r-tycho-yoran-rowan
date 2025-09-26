@@ -12,8 +12,6 @@
             {{ __('misc.all_brands') }}
         </x-slot:title>
     </h1>
-
-
     <?php
 
     ?>

@@ -42,10 +42,12 @@ $topSplit = 1;
     </div>
 
 
+
+
+
     <div class="breadcrumb">
         <p>{{ __('misc.homepage_description') }}</p>
     </div>
-
 
     <div class="jumbotron">
 
