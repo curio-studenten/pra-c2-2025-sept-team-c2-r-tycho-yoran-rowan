@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\FormController;
 use Illuminate\Database\Eloquent\Collection;
@@ -60,10 +61,14 @@ Route::post('/contact', [ContactController::class, 'store']);
 Route::get('/form', [FormController::class, 'index']);
 Route::post('/form', [FormController::class, 'store']);
 
+Route::get('/admin', [AdminController::class, 'index'])->name('admin.index');
+Route::delete('/admin/{id}', [AdminController::class, 'destroy'])->name('admin.destroy');
+
+
 use App\Http\Controllers\ShortLinkController;
 
-Route::get('/shorten', [ShortLinkController::class, 'shorten']); 
-Route::get('/link/{code}', [ShortLinkController::class, 'redirect']); 
+Route::get('/shorten', [ShortLinkController::class, 'shorten']);
+Route::get('/link/{code}', [ShortLinkController::class, 'redirect']);
 
 
 
