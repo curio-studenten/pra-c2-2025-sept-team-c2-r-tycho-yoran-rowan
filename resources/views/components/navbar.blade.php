@@ -6,6 +6,9 @@
             <a class="navbar-brand" href="/contact" title="{{ __('misc.contact_alt') }}">{{ __('contact') }}</a>
 
             <a class="navbar-brand" href="/form" title="{{ __('misc.form_alt') }}">{{ __('Form') }}</a>
+
+            <a class="navbar-brand" href="/admin" title="{{ __('misc.admin_alt') }}">{{ __('Admin Overview') }}</a>
+
         </div>
 
         <div id="navbar" class="form-inline">

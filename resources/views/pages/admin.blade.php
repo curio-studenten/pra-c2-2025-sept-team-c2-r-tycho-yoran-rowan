@@ -14,33 +14,50 @@
     </h1>
     <?php
 
+        $half = ceil(count($manuals) / 2);
+        $left = array_slice($manuals->all(), 0, $half);
+        $right = array_slice($manuals->all(), $half);
+
     ?>
 
     <div class="jumbotron">
-
-        <table>
-            <tr>
-                <th>Naam</th>
-                <th>Delete</th>
-            </tr>
-
-            @foreach($manuals as $manual)
+        <div class="tables-wrapper">
+            <table class="table">
                 <tr>
-
-                    <td>
-                        <p>{{$manual->name}}</p>
-                    </td>
-                    <td>
-                        <form action="{{route("admin.destroy", $manual->id)}}" method="POST">
-                        @csrf
-                        @method('DELETE')
-                        <input type="submit" value="DELETE">
-                        </form>
-                    </td>
+                    <th>Naam</th>
+                    <th>Delete</th>
                 </tr>
-            @endforeach
-
-        </table>
-
+                @foreach($left as $manual)
+                    <tr>
+                        <td><p>{{ $manual->name }}</p></td>
+                        <td>
+                            <form action="{{ route('admin.destroy', $manual->id) }}" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <input type="submit" value="DELETE">
+                            </form>
+                        </td>
+                    </tr>
+                @endforeach
+            </table>
+            <table class="table">
+                <tr>
+                    <th>Naam</th>
+                    <th>Delete</th>
+                </tr>
+                @foreach($right as $manual)
+                    <tr>
+                        <td><p>{{ $manual->name }}</p></td>
+                        <td>
+                            <form action="{{ route('admin.destroy', $manual->id) }}" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <input type="submit" value="DELETE">
+                            </form>
+                        </td>
+                    </tr>
+                @endforeach
+            </table>
+        </div>
     </div>
 </x-layouts.app>
